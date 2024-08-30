@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dynamic Form Generator</h1>
+
+        <div id="form-definition">
+            <h2><u>Define Form Fields</u></h2>
+            <table id="field-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Mandatory</th>
+                        <th>Options</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="field-tbody"></tbody>
+            </table>
+            <div class="buttons">
+                <button onclick="addRow()">Add Row</button>
+                <button onclick="saveJSON()">Save JSON</button>
+                <input type="file" id="load-json" accept=".json" style="display:none;">
+                <button onclick="document.getElementById('load-json').click()">Load JSON</button>
+                <button onclick="generateForm()">Generate Form</button>
+                <div class="view-prev-btn">
+                    <button onclick="viewPreviousSubmissions()">View Previous Submissions</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="generated-form-container" style="display:none;">
+            <h2>Generated Form</h2>
+            <form id="generated-form"></form>
+            <button onclick="saveSubmission()">Save</button>
+            <button onclick="showScreen('form-definition')">Back to Form Definition</button>
+        </div>
+
+
+        <div id="form-selection" style="display:none;">
+            <h2>Select a Form</h2>
+            <select id="form-dropdown"></select>
+            <button onclick="loadSelectedForm()">Generate Form</button>
+        </div>
+
+
+        <div id="submissions-container">
+            <h2>Previous Submissions</h2>
+            <div id="submissions-list"></div>
+            <button onclick="showScreen('form-definition')">Back to Form Definition</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
