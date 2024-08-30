@@ -24,10 +24,10 @@ This project is a Dynamic Form Generator built using HTML, CSS, and JavaScript. 
 Follow these steps to run the project locally:
 
 1. Clone the Repository:
-   ``` git clone https://github.com/yourusername/dynamic-form-generator.git ```
+   ``` git clone https://github.com/usmannkarim/Dynamic-Form-Generator.git ```
    
 2. Navigate to the Project Directory:
-   ``` cd dynamic-form-generator ```
+   ``` cd Dynamic-Form-Generator ```
 
 3. Open `index.html` in Your Web Browser:
    - Simply double-click the `index.html` file or use a web server if you prefer:
